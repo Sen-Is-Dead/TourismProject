@@ -47,6 +47,7 @@ public class Tourism {
                 System.out.println("I have no information about that attraction.");
                 System.out.println();
             }
+            
         }
     }
     public static void printAttraction(Attraction x){
