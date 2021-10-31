@@ -32,20 +32,19 @@ public class Tourism {
         for(int i = 1; i <= counter; i++){
             System.out.println("Name attraction " + i + ":");
             Scanner input1 = new Scanner(System.in);
-            String name = input1.nextLine();
-            if(name.equals("The Eden Project")){
-                printAttraction(eden);
+            String AttractName = input1.nextLine().toLowerCase();
+            if (AttractName.equals("the eden project")){
+                output(eden);
             }
-            else if(name.equals("Tate Modern")){
-                printAttraction(tate);
+            else if (AttractName.equals("london zoo")){
+                output(zoo);
             }
-            else if(name.equals("London Zoo")){
-                printAttraction(zoo);
+            else if (AttractName.equals("tate modern")){
+                output(tate);
             }
-            else
-            {
-                System.out.println("I have no information about that attraction.");
-                System.out.println();
+            else{
+                System.out.println("Sorry, there is no information on this attraction.\n");
+                i = i - 1;
             }
         }
     }
@@ -57,7 +56,7 @@ public class Tourism {
         }
         else
         {
-            bankHoliday = " does not open on bank holidays";
+            bankHoliday = " does not open on bank holidays.";
         }
         System.out.println(x.name + bankHoliday);
         System.out.println("It opens at " + x.opening + "am.");
